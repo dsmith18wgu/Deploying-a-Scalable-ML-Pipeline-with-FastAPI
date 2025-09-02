@@ -1,6 +1,7 @@
 import pickle
 from sklearn.metrics import fbeta_score, precision_score, recall_score
 from ml.data import process_data
+from sklearn.ensemble import RandomForestClassifier
 # TODO: add necessary import
 
 # Optional: implement hyperparameter tuning.
@@ -19,8 +20,11 @@ def train_model(X_train, y_train):
     model
         Trained machine learning model.
     """
-    # TODO: implement the function
-    pass
+    rf = RandomForestClassifier(random_state=42, n_jobs=1)
+
+    rf.fit(X_train, y_train)
+
+    return rf
 
 
 def compute_model_metrics(y, preds):
