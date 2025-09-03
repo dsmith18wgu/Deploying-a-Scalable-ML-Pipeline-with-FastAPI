@@ -2,8 +2,7 @@ import pickle
 from sklearn.metrics import fbeta_score, precision_score, recall_score
 from ml.data import process_data
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.preprocessing._encoders import OneHotEncoder
-from sklearn.preprocessing._label import LabelBinarizer
+
 
 
 # Optional: implement hyperparameter tuning.
