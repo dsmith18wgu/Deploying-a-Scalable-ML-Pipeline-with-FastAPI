@@ -76,11 +76,13 @@ def save_model(model, path):
     path : str
         Path to save pickle file.
     """
-    pickle.dump(model, path)
+    with open(path, 'wb') as file:
+        pickle.dump(model, file)
 
 def load_model(path):
     """ Loads pickle file from `path` and returns it."""
-    model = pickle.load(path)
+    with open(path, 'rb') as file:
+        model = pickle.load(file)
     return model
 
 
