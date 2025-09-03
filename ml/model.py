@@ -4,7 +4,7 @@ from ml.data import process_data
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing._encoders import OneHotEncoder
 from sklearn.preprocessing._label import LabelBinarizer
-# TODO: add necessary import
+
 
 # Optional: implement hyperparameter tuning.
 def train_model(X_train, y_train):
