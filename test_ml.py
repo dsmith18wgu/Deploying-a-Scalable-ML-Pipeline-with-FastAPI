@@ -2,8 +2,7 @@ import pytest
 from ml.data import apply_label
 import pickle
 from sklearn.ensemble import RandomForestClassifier
-
-# TODO: add necessary import
+import pandas as pd
 
 # TODO: implement the first test. Change the function name and input as needed
 model_path = "model/model.pkl"
@@ -24,7 +23,8 @@ def test_apply_label():
 # TODO: implement the second test. Change the function name and input as needed
 def test_model():
     """
-    # add description for the second test
+    This test confirms the model type is Random Forest Classifier.
+
     """
     with open(model_path, 'rb') as file:
         model = pickle.load(file)
@@ -32,9 +32,12 @@ def test_model():
 
 
 # TODO: implement the third test. Change the function name and input as needed
-def test_three():
+def test_data():
     """
-    # add description for the third test
+    Tests to make sure the data is imported into a pandas dataframe and has data.
+
     """
-    # Your code here
-    pass
+    data = pd.read_csv("data/census.csv")
+    assert isinstance(data, pd.DataFrame)
+    assert data.shape[0]>0
+    assert data.shape[1]>0
