@@ -6,7 +6,9 @@ from ml.data import apply_label
 
 def test_apply_label():
     """
-    # add description for the first test
+    This test checks to see if the apply label function returns the 
+    correct string output based on the binary input.
+    
     """
     result = apply_label([1])
     assert result == ">50K", f"Expected '>50K', but got {result}"
