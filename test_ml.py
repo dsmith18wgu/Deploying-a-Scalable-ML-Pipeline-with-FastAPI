@@ -4,7 +4,7 @@ import pickle
 from sklearn.ensemble import RandomForestClassifier
 import pandas as pd
 
-# TODO: implement the first test. Change the function name and input as needed
+
 model_path = "model/model.pkl"
 
 def test_apply_label():
@@ -20,7 +20,7 @@ def test_apply_label():
     assert result == "<=50K", f"Expected '<=50K', but got {result}"
 
 
-# TODO: implement the second test. Change the function name and input as needed
+
 def test_model():
     """
     This test confirms the model type is Random Forest Classifier.
@@ -31,7 +31,7 @@ def test_model():
     assert isinstance(model, RandomForestClassifier)
 
 
-# TODO: implement the third test. Change the function name and input as needed
+
 def test_data():
     """
     Tests to make sure the data is imported into a pandas dataframe and has data.
