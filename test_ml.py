@@ -1,13 +1,18 @@
 import pytest
+from ml.data import apply_label
 # TODO: add necessary import
 
 # TODO: implement the first test. Change the function name and input as needed
-def test_one():
+@pytest.fixture
+def test_apply_label():
     """
     # add description for the first test
     """
-    # Your code here
-    pass
+    result = apply_label([1])
+    assert result == ">50K", f"Expected '>50K', but got {result}"
+
+    result = apply_label([0])
+    assert result == "<=50K", f"Expected '<=50K', but got {result}"
 
 
 # TODO: implement the second test. Change the function name and input as needed
