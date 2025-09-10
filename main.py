@@ -39,7 +39,7 @@ app = FastAPI()
 @app.get("/")
 async def get_root():
     """ Say hello!"""
-    return {"greeting": "Hello!"}
+    return {"greeting": "Hello from the API!"}
 
 
 
@@ -69,5 +69,5 @@ async def post_inference(data: Data):
         training=False,
         encoder=encoder
     )
-    _inference = inference.model.predict(data_processed)
+    _inference = model.predict(data_processed)
     return {"result": apply_label(_inference)}

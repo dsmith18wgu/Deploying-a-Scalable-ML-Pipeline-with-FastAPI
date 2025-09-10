@@ -6,9 +6,9 @@ import requests
 r = requests.get("http://127.0.0.1:8000")
 
 
-print(r.status_code)
+print('Status code:', r.status_code)
 
-print(r.text)
+print('Result:', r.json()['greeting'])
 
 
 
@@ -29,11 +29,11 @@ data = {
     "native-country": "United-States",
 }
 
+url = "http://127.0.0.1:8000/data/"
+r = requests.post(url, json=data)
 
-r = requests.post("http://127.0.0.1:8000", json=data)
 
 
+print("Status code:", r.status_code)
 
-print(r.status_code)
-
-print(r.json())
+print('Result:', r.json()['result'])
