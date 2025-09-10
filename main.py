@@ -69,5 +69,5 @@ async def post_inference(data: Data):
         training=False,
         encoder=encoder
     )
-    _inference = model.predict(data_processed)
+    _inference = inference.model.predict(data_processed)
     return {"result": apply_label(_inference)}
